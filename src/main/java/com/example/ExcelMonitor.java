@@ -14,7 +14,7 @@ public class ExcelMonitor {
 	public static void main(String[] args) {
 
 		/*
-		 * String filePath = C:\\Gowri\\Full stack development\18.Dev apps cont CICD-Cont monitiring\Day3\CICDDemo // Path to
+		 * String filePath = "C:\\dev\\cicdpipe\\mysheet\\ScienceFair.xlsx"; // Path to
 		 * the Excel file
 		 */
 		
@@ -74,7 +74,11 @@ public class ExcelMonitor {
 			}
 
 			if (!errorsFound) {
-				System.out.println("All data is correct!");
+			    System.out.println("All data is correct!");
+			    System.exit(0);
+			} else {
+			    System.out.println("Validation failed - see messages above.");
+			    System.exit(1);
 			}
 
 		} catch (IOException e) {
